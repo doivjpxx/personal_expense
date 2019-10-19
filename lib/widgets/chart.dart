@@ -20,9 +20,6 @@ class Chart extends StatelessWidget {
           totalSum += recentTransactions[i].amount;
         }
       }
-
-      print(DateFormat.E().format(weekDay));
-
       return {
         'day': DateFormat.E().format(weekDay).substring(0, 1),
         'amount': totalSum
@@ -46,6 +43,8 @@ class Chart extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: groupTransactionValues.map((data) {
+            print(data['amount']);
+            print(totalSpending);
             return Flexible(
               fit: FlexFit.tight,
               child: ChartBar(
