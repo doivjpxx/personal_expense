@@ -43,8 +43,6 @@ class Chart extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: groupTransactionValues.map((data) {
-            print(data['amount']);
-            print(totalSpending);
             return Flexible(
               fit: FlexFit.tight,
               child: ChartBar(
